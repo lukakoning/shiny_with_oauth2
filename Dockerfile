@@ -21,9 +21,6 @@ RUN wget https://github.com/oauth2-proxy/oauth2-proxy/releases/download/v${OAUTH
 # Copy Nginx config
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Copy OAuth2 Proxy config
-COPY oauth2_proxy.cfg /etc/oauth2_proxy.cfg
-
 # Copy Shiny Server config
 COPY shiny-customized.config /etc/shiny-server/shiny-server.conf
 # Copy modified files to enable passing all headers
