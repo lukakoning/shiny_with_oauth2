@@ -8,4 +8,10 @@ Because the open-source version of Shiny Server by default does not pass on all 
 
 ## Usage
 
-To run, build the Docker container and run it with the relevant environment variables set (OAUTH2_CLIENT_ID, OAUTH2_CLIENT_SECRET, OAUTH2_COOKIE_SECRET). (Make a GitHub OAuth app at <https://github.com/settings/developers>; see [OAuth2 Proxy documentation](https://oauth2-proxy.github.io/oauth2-proxy/configuration/overview#generating-a-cookie-secret) for generating a Cookie secret.) Connect to the Nginx port (8080). You will be prompted to login via GitHub, after which you will be granted access to the app. You may impose restrictions to who can access the app via OAuth2 Proxy configuration or in the Shiny app itself (using the headers about the authenticated user).
+To run, build the Docker container and run it with the relevant environment variables set (OAUTH2_CLIENT_ID, OAUTH2_CLIENT_SECRET, OAUTH2_COOKIE_SECRET). (Make a GitHub OAuth app at <https://github.com/settings/developers>; see [OAuth2 Proxy documentation](https://oauth2-proxy.github.io/oauth2-proxy/configuration/overview#generating-a-cookie-secret) for generating a Cookie secret.) Connect to the Nginx port (8080). You will be prompted to login via GitHub, after which you will be granted access to the app.
+
+You may impose restrictions to who can access the app via [OAuth2 Proxy configuration](https://oauth2-proxy.github.io/oauth2-proxy/configuration/providers/) or in the Shiny app itself (using the headers about the authenticated user).
+
+## See also
+
+See also [this vignette](https://cran.r-project.org/web/packages/AzureAuth/vignettes/shiny.html) for a similar flow done purely from Shiny in R (example for Azure AD/Microsoft Entra ID).
